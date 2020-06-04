@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Relive: sharing timeless stories</title>
+  <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-storage.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+  <!-- load font awesome here for icon used on the page -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <!-- <p>this is a test</p> -->
+  <img id='button' class='logo' src="new_icon.png">
+  <div class="container">
+    <!--page container -->
+    <div class="text-box" contenteditable="true"></div>
+    <!--text box which will contain spoken text -->
+    <video id='vid_tag' class="vid" autoplay loop muted>
+
+      <source id="vid_src" src="" type="video/mp4">
+
+      Sorry, your browser doesn't support embedded videos.
+    </video>
+
+  </div>
+
+  <ul id="app">
+    <li v-for="tag in tags">
+      {{tag}}
+    </li>
+  </ul>
+
+  <audio class="sound" src="chime.mp3"></audio>
+  <!-- sound to be played when we click icon => http://soundbible.com/1598-Electronic-Chime.html -->
+
+
+
+
+  <script src="js/index.js"></script> <!-- link to index.js script -->
+</body>
+
+</html>
